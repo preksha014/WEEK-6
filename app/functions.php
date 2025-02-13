@@ -11,4 +11,15 @@ function urlIs($val)
 {
     return $_SERVER['REQUEST_URI'] === $val;
 }
+
+function authorize($condition,$status=Response::FORBIDDEN){
+if(!$condition){
+    abort($status);
+}
+}
+
+// function base_path($path){
+//     return BASE_PATH.$path;
+// }
+
 ?>
