@@ -1,9 +1,8 @@
 <?php
-use Core\Database;
-
-$config = require base_path('config.php');
-$db = new Database($config['database']);
-
+use Core\Container;
+// $config = require base_path('config.php');
+// $db = new Database($config['database']);
+$db=Container::resolve('Core\Database');
 $currentUserId = 1;
 
 $note = $db->query('select * from notes where id = :id', [
