@@ -8,7 +8,7 @@ use Core\App;
 $db = App::resolve(Database::class);
 
 // $db=Container::resolve('Core\Database');
-$currentUserId = 1;
+$currentUserId = 3;
 
 $note = $db->query('select * from notes where id = :id', [
     'id' => $_POST['id']
