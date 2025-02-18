@@ -7,7 +7,7 @@ use Core\App;
 // $db = new Database($config['database']);
 $db = App::resolve(Database::class);
 
-// $db=Container::resolve('Core\Database');
+//$db=Container::resolve('Core\Database');
 $currentUserId = 3;
 
 $note = $db->query('select * from notes where id = :id', [
