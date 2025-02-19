@@ -4,17 +4,18 @@ use Core\Session;
 use Core\ValidationException;
 const BASE_PATH = __DIR__ . "/../";
 //echo BASE_PATH;
+require BASE_PATH . '/vendor/autoload.php';
 require BASE_PATH . 'Core/functions.php';
 
-spl_autoload_register(
-     function ($class) {
-          // Core\Database
-          $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-          //dd($class);
-          require base_path("{$class}.php");
-     }
+// spl_autoload_register(
+//      function ($class) {
+//           // Core\Database
+//           $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
+//           //dd($class);
+//           require base_path("{$class}.php");
+//      }
 
-);
+// );
 require base_path('bootstrap.php');
 $router = new \Core\Router();
 

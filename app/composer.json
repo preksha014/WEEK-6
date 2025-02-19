@@ -1,0 +1,26 @@
+{
+    "name": "hp/app",
+    "authors": [
+        {
+            "name": "Preksha",
+            "email": "ranapreksha8@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^11.43"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.7"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
